@@ -267,31 +267,6 @@
             box-shadow: 0 20px 40px var(--accent-glow);
         }
 
-        .cta-button2 {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2.5rem;
-            background: var(--gradient);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-            animation-delay: 0.8s;
-        }
-
-        .cta-button2:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px var(--accent-glow);
-        }
-
         .scroll-indicator {
             position: absolute;
             bottom: 3rem;
@@ -396,6 +371,39 @@
             transform: scale(1.05);
         }
 
+        /* Play icon overlay */
+        .clip-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 61, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .clip-play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 18px solid white;
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+            margin-left: 4px;
+        }
+
+        .clip-card:hover .clip-play-icon {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+
         .clip-info {
             position: absolute;
             bottom: 0;
@@ -458,82 +466,6 @@
             background: var(--accent);
             border-color: var(--accent);
             color: var(--white);
-        }
-
-        /* Events Section */
-        #events {
-            background: var(--black);
-        }
-
-        .events-list {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .event-item {
-            display: grid;
-            grid-template-columns: 150px 1fr auto;
-            gap: 3rem;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--gray);
-            align-items: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .event-item:hover {
-            padding-left: 2rem;
-            background: linear-gradient(90deg, rgba(255,61,0,0.1), transparent);
-        }
-
-        .event-date {
-            text-align: center;
-        }
-
-        .event-day {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            line-height: 1;
-            color: var(--accent);
-        }
-
-        .event-month {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--light-gray);
-        }
-
-        .event-details h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-details p {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .event-location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--light-gray);
-        }
-
-        .event-arrow {
-            font-size: 2rem;
-            color: var(--gray);
-            transition: all 0.3s ease;
-        }
-
-        .event-item:hover .event-arrow {
-            color: var(--accent);
-            transform: translateX(10px);
         }
 
         /* Equipment Section */
@@ -1078,15 +1010,6 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-
-            .event-item {
-                grid-template-columns: 100px 1fr;
-                gap: 1.5rem;
-            }
-
-            .event-arrow {
-                display: none;
-            }
         }
 
         @media (max-width: 768px) {
@@ -1134,7 +1057,6 @@
     <section class="hero">
         <div class="hero-video-container">
             <video class="hero-video" autoplay muted loop playsinline>
-                <!-- Ersetze mit deinem lokalen Video, z.B.: -->
                 <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm" type="video/webm">
             </video>
             <div class="hero-video-overlay"></div>
@@ -1156,9 +1078,6 @@
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>
-        
-
-
         </div>
         <div class="scroll-indicator">
             <span>Scroll</span>
@@ -1183,9 +1102,10 @@
 
         <div class="clips-grid">
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HEIDEPARK SOLTAU MIT ZARBEX</h3>
                     <div class="clip-meta">
@@ -1196,9 +1116,10 @@
             </div>
 
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HAMBURGER DOM MIT SSIO</h3>
                     <div class="clip-meta">
@@ -1209,9 +1130,10 @@
             </div>
 
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HAMBURGER DOM MIT ZARBEX</h3>
                     <div class="clip-meta">
@@ -1222,9 +1144,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FIBO MIT KOLLEGAH</h3>
                     <div class="clip-meta">
@@ -1235,9 +1158,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip5.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip5.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WIEN MIT RAF CAMORA</h3>
                     <div class="clip-meta">
@@ -1248,9 +1172,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Camper%20Abholen.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Camper%20Abholen.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">CAMPER ABHOLUNG</h3>
                     <div class="clip-meta">
@@ -1261,9 +1186,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip6.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip6.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE TOUR MIT KOLLEGAH</h3>
                     <div class="clip-meta">
@@ -1274,9 +1200,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Bremer%20Weihnachtsmarkt%20Sascha.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Bremer%20Weihnachtsmarkt%20Sascha.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WEIHNACHTSMARKT MIT SASCHA</h3>
                     <div class="clip-meta">
@@ -1287,9 +1214,10 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Essen%20Oldtimer%20Show.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Essen%20Oldtimer%20Show.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WELTMESSE FÜR OLDTIMER</h3>
                     <div class="clip-meta">
@@ -1300,9 +1228,10 @@
             </div>
 
             <div class="clip-card" data-category="street">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip6.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip6.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FAHRRAD-IRL AUS AMSTERDAM</h3>
                     <div class="clip-meta">
@@ -1313,9 +1242,10 @@
             </div>
 
             <div class="clip-card" data-category="street">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip6.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip6.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE FAHRRAD TOUR MIT GIGGSENTV</h3>
                     <div class="clip-meta">
@@ -1326,9 +1256,10 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip6.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip6.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">NIGHT-TOUR MIT S63 AMG</h3>
                     <div class="clip-meta">
@@ -1339,9 +1270,10 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="videos/clip6.mp4" type="video/mp4">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="videos/clip6.mp4#t=0.1" type="video/mp4">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FAHRRAD NIGHT-TOUR ST. PETER-ORDING</h3>
                     <div class="clip-meta">
@@ -1352,9 +1284,10 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline autoplay>
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm" type="video/webm">
+                <video class="clip-video" muted loop playsinline preload="metadata">
+                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm#t=0.1" type="video/webm">
                 </video>
+                <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE-TOUR MIT PORSCHE GT3RS</h3>
                     <div class="clip-meta">
@@ -1458,8 +1391,6 @@
         </div>
     </div>
 
-
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-header">
@@ -1479,7 +1410,7 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon">✉</div>
-                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f070a0303002f061d03421c1b1d0a0e02060108410b0a">[email&#160;protected]</a></span>
+                        <span>hello@irl-streaming.de</span>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">☎</div>
@@ -1585,18 +1516,16 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Filter functionality
         const filterTabs = document.querySelectorAll('.filter-tab');
         const clipCards = document.querySelectorAll('.clip-card');
 
         filterTabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Update active tab
                 filterTabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
 
-                // Filter clips
                 const filter = tab.dataset.filter;
                 clipCards.forEach(card => {
                     if (filter === 'all' || card.dataset.category === filter) {
@@ -1604,8 +1533,29 @@
                         card.style.animation = 'fadeInUp 0.5s ease forwards';
                     } else {
                         card.style.display = 'none';
+                        // Pause hidden videos
+                        const video = card.querySelector('.clip-video');
+                        if (video) video.pause();
                     }
                 });
+            });
+        });
+
+        // Hover to play videos
+        clipCards.forEach(card => {
+            const video = card.querySelector('.clip-video');
+            
+            card.addEventListener('mouseenter', () => {
+                if (video) {
+                    video.play().catch(() => {});
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
             });
         });
 
@@ -1651,15 +1601,6 @@
             });
         });
 
-        // Parallax effect on scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-bg');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -1675,7 +1616,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.clip-card, .event-item, .stat-item').forEach(el => {
+        document.querySelectorAll('.clip-card, .stat-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
