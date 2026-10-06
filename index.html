@@ -8,13 +8,12 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -33,10 +32,10 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Video loads immediately but optimized -->
     <section class="hero">
         <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto">
                 <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm" type="video/webm">
             </video>
             <div class="hero-video-overlay"></div>
@@ -65,7 +64,7 @@
         </div>
     </section>
 
-    <!-- Clips Section -->
+    <!-- Clips Section - Videos use data-src for lazy loading -->
     <section id="clips">
         <div class="section-header">
             <p class="section-tag">Portfolio</p>
@@ -82,9 +81,7 @@
 
         <div class="clips-grid">
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">36h FRANKREICH ROLLER TOUR</h3>
@@ -96,9 +93,7 @@
             </div>
 
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HEIDEPARK SOLTAU MIT ZARBEX</h3>
@@ -110,9 +105,7 @@
             </div>
 
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HAMBURGER DOM MIT SSIO</h3>
@@ -124,9 +117,7 @@
             </div>
 
             <div class="clip-card" data-category="Freizeitpark">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">HAMBURGER DOM MIT ZARBEX</h3>
@@ -138,9 +129,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FIBO MIT KOLLEGAH</h3>
@@ -152,9 +141,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Raf%20Camora.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Raf%20Camora.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WIEN MIT RAF CAMORA</h3>
@@ -166,9 +153,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Camper%20Abholen.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Camper%20Abholen.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">CAMPER ABHOLUNG</h3>
@@ -180,9 +165,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Kollegah%20Irl.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Kollegah%20Irl.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE TOUR MIT KOLLEGAH</h3>
@@ -194,9 +177,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Bremer%20Weihnachtsmarkt%20Sascha.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Bremer%20Weihnachtsmarkt%20Sascha.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WEIHNACHTSMARKT MIT SASCHA</h3>
@@ -208,9 +189,7 @@
             </div>
 
             <div class="clip-card" data-category="event">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Essen%20Oldtimer%20Show.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Essen%20Oldtimer%20Show.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">WELTMESSE FÜR OLDTIMER</h3>
@@ -222,9 +201,7 @@
             </div>
 
             <div class="clip-card" data-category="street">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrradtour%20Dortmund.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrradtour%20Dortmund.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FAHRRAD-IRL DORTMUND</h3>
@@ -236,9 +213,7 @@
             </div>
 
             <div class="clip-card" data-category="street">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Seilbahn%20Berlin.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Seilbahn%20Berlin.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">SEILBAHN-TOUR BERLIN</h3>
@@ -250,9 +225,7 @@
             </div>
 
             <div class="clip-card" data-category="street">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrrad%20Giggsen.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrrad%20Giggsen.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE FAHRRAD TOUR MIT GIGGSENTV</h3>
@@ -264,9 +237,7 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Nighttour%20S63amg.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Nighttour%20S63amg.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">NIGHT-TOUR MIT S63 AMG</h3>
@@ -278,9 +249,7 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Sankt%20Peter%20Ording%20Fahrrad.webm" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Sankt%20Peter%20Ording%20Fahrrad.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">FAHRRAD NIGHT-TOUR ST. PETER-ORDING</h3>
@@ -292,9 +261,7 @@
             </div>
 
             <div class="clip-card" data-category="nightlife">
-                <video class="clip-video" muted loop playsinline preload="metadata">
-                    <source src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm#t=0.1" type="video/webm">
-                </video>
+                <video class="clip-video" muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm"></video>
                 <div class="clip-play-icon"></div>
                 <div class="clip-info">
                     <h3 class="clip-title">BUXTEHUDE-TOUR MIT PORSCHE GT3RS</h3>
@@ -304,7 +271,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -337,8 +303,8 @@
             <h2 class="section-title">PROJEKT STARTEN</h2>
         </div>
 
-        <div class="contact-container" style="display: block; max-width: 800px; margin: 0 auto;">
-            <div class="contact-info" style="text-align: center;">
+        <div class="contact-container">
+            <div class="contact-info">
                 <h3>Bereit für dein nächstes Live-Event?</h3>
                 <p>
                     Egal ob Festival, Konferenz, Club-Night oder Street-Content –
@@ -346,18 +312,18 @@
                     erfahrenes Team und kreative Produktion.
                 </p>
 
-                <div class="contact-details" style="display: inline-block; text-align: left;">
-                    <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div class="contact-icon" style="width: 40px; height: 40px; min-width: 40px; background: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">✉</div>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
                         <span>yusuf@montanablack.de</span>
                     </div>
-                    <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div class="contact-icon" style="width: 40px; height: 40px; min-width: 40px; background: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">◎</div>
+                    <div class="contact-item">
+                        <div class="contact-icon">◎</div>
                         <span>Hamburg, Deutschland</span>
                     </div>
                 </div>
 
-                <div class="social-links" style="justify-content: center;">
+                <div class="social-links">
                     <a href="https://www.twitch.tv/montanablack88" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitch">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
@@ -393,8 +359,7 @@
         <div class="cookie-content">
             <div class="cookie-text">
                 <h4>🍪 Cookie-Einstellungen</h4>
-                <p>Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten. 
-                   Einige Cookies sind technisch notwendig, andere helfen uns, die Website zu verbessern.</p>
+                <p>Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten.</p>
             </div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-btn-reject" onclick="handleCookies(false)">Nur notwendige</button>
@@ -430,7 +395,6 @@
             <div id="videoContainer"></div>
         </div>
     </div>
-
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
