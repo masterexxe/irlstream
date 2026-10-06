@@ -85,11 +85,13 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1.5rem 3rem;
+            padding: 1rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            mix-blend-mode: difference;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .logo {
@@ -316,8 +318,8 @@
         
         .marquee-track {
             display: flex;
-            gap: 4rem;
-            animation: marquee 30s linear infinite;
+            gap: 3rem;
+            animation: marquee 60s linear infinite;
             width: max-content;
         }
         
@@ -330,7 +332,7 @@
             white-space: nowrap;
             display: flex;
             align-items: center;
-            gap: 4rem;
+            gap: 3rem;
         }
         
         .marquee-item::after {
@@ -890,18 +892,18 @@
 
 <div class="marquee">
     <div class="marquee-track">
-        <span class="marquee-item"><span class="marquee-name">@Schradin</span> Rentnertour 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Knossi</span> Traumatica 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Monte</span> Legends Track Day 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Schradin</span> Hollandtour 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Zarbex</span> Splash Games 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Monte</span> 36h Frankreichtour 2025</span>
-        <span class="marquee-item"><span class="marquee-name">@Schradin</span> Rentnertour 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Knossi</span> Traumatica 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Monte</span> Legends Track Day 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Schradin</span> Hollandtour 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Zarbex</span> Splash Games 2026</span>
-        <span class="marquee-item"><span class="marquee-name">@Monte</span> 36h Frankreichtour 2025</span>
+        <span class="marquee-item"><span class="marquee-name">@Schradin:</span> Rentnertour 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Knossi:</span> Traumatica 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Monte:</span> Legends Track Day 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Schradin:</span> Hollandtour 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Zarbex:</span> Splash Games 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Monte:</span> 36h Frankreichtour 2025</span>
+        <span class="marquee-item"><span class="marquee-name">@Schradin:</span> Rentnertour 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Knossi:</span> Traumatica 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Monte:</span> Legends Track Day 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Schradin:</span> Hollandtour 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Zarbex:</span> Splash Games 2026</span>
+        <span class="marquee-item"><span class="marquee-name">@Monte:</span> 36h Frankreichtour 2025</span>
     </div>
 </div>
 
@@ -965,7 +967,7 @@
     
     <div class="work-grid">
         <div class="work-item reveal" data-category="event">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Hero-Video.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">36h Frankreich Roller Tour</h3>
@@ -973,7 +975,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="Freizeitpark">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yussuf%20Heidepark.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Heidepark mit Zarbex</h3>
@@ -981,7 +983,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="Freizeitpark">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Yusuf%20Dom%20Ssio.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Hamburger DOM mit SSIO</h3>
@@ -989,7 +991,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="Freizeitpark">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Dom%20Zarbex.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Hamburger DOM mit Zarbex</h3>
@@ -997,7 +999,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="event">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fibo2925.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">FIBO mit Kollegah</h3>
@@ -1005,7 +1007,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="event">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Raf%20Camora.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Raf%20Camora.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Wien mit RAF Camora</h3>
@@ -1013,7 +1015,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="street">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrradtour%20Dortmund.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Fahrradtour%20Dortmund.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Fahrrad-IRL Dortmund</h3>
@@ -1021,7 +1023,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="nightlife">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Nighttour%20S63amg.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Nighttour%20S63amg.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Night-Tour S63 AMG</h3>
@@ -1029,7 +1031,7 @@
             </div>
         </div>
         <div class="work-item reveal" data-category="nightlife">
-            <video muted loop playsinline preload="none" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm"></video>
+            <video muted loop playsinline preload="metadata" data-src="https://pub-0e4ec3706ebe46e3b092ee4623ff8251.r2.dev/Gt3rs%20Buxte.webm"></video>
             <div class="work-play"></div>
             <div class="work-overlay">
                 <h3 class="work-title">Porsche GT3RS Tour</h3>
@@ -1154,11 +1156,25 @@ document.querySelectorAll('.filter-tab').forEach(tab => {
     });
 });
 
+// Load videos on scroll into viewport
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target.querySelector('video');
+            if (video && video.dataset.src && !video.src) {
+                video.src = video.dataset.src;
+                video.load();
+            }
+        }
+    });
+}, { threshold: 0.1, rootMargin: '100px' });
+
+document.querySelectorAll('.work-item').forEach(item => videoObserver.observe(item));
+
 // Hover to play
 document.querySelectorAll('.work-item').forEach(item => {
     const video = item.querySelector('video');
     item.addEventListener('mouseenter', () => {
-        if (video.dataset.src && !video.src) video.src = video.dataset.src;
         video.play().catch(() => {});
     });
     item.addEventListener('mouseleave', () => {
