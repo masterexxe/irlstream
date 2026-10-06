@@ -35,7 +35,8 @@ body {
     background: var(--black);
     color: var(--white);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Grain Overlay */
@@ -130,6 +131,7 @@ nav {
    ============================================= */
 .hero {
     height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -685,6 +687,50 @@ section {
 }
 
 /* =============================================
+   Contact Section
+   ============================================= */
+.contact-container {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-details {
+    display: inline-block;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* =============================================
    Contact Form
    ============================================= */
 .contact-form {
@@ -1028,6 +1074,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 1rem 1.5rem;
+    }
+    
+    section {
+        padding: 4rem 1.5rem;
+    }
+    
+    footer {
+        padding: 2rem 1.5rem;
+    }
+    
     .clips-grid {
         grid-template-columns: 1fr;
     }
